@@ -5,11 +5,13 @@ class Cvp_calc:
         self.fc = fc
 
     def break_even_units(self):
+        """Returns break even units"""
         cm = (self.sls - self.vc)
         result = self.fc / cm
         return result
 
     def break_even_dollars(self):
+        """Returns break even dollars"""
         cm_pct = (self.sls - self.vc) / self.sls
         result = self.fc / cm_pct
         return result
@@ -20,7 +22,7 @@ class Cvp_calc:
         break_even = (self.fc + ni) / cm
         return break_even
 
-    def bev_units_ni(self, ni):
+    def bev_dollars_ni(self, ni):
         """Returns break even dollars for specific net income"""
         cm = self.sls - self.vc
         cm_pct = cm / self.sls
