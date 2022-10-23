@@ -9,3 +9,12 @@ class Cvp_calc:
         result = self.fc / cm_pct
         return result
 
+    def bev_units_ni(self, ni):
+        """Returns break even units for specific net income"""
+        cm = self.sls - self.vc
+        break_even = (self.fc + ni) / cm
+        return break_even
+
+bv = Cvp_calc(16, 10, 48000)
+print(bv.bev_units_ni(24000))
+
