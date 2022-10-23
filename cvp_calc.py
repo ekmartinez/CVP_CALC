@@ -15,6 +15,3 @@ class Cvp_calc:
         break_even = (self.fc + ni) / cm
         return break_even
 
-bv = Cvp_calc(16, 10, 48000)
-print(bv.bev_units_ni(24000))
-
